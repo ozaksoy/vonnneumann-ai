@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vonn Neumann | Enterprise LLM Orchestration & Agent Infrastructure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0b0f17; color: #f3f4f6; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-card { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    </style>
+</head>
+<body class="antialiased selection:bg-purple-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800/60 sticky top-0 bg-[#0b0f17]/80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20">VN</div>
+                <span class="font-semibold text-lg tracking-tight text-white">Vonn Neumann <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-normal">Labs</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+                <a href="#platform" class="hover:text-white transition-colors">Platform</a>
+                <a href="#architecture" class="hover:text-white transition-colors">Architecture</a>
+                <a href="#docs" class="hover:text-white transition-colors">Documentation</a>
+                <a href="#enterprise" class="hover:text-white transition-colors">Enterprise</a>
+            </div>
+            <div>
+                <a href="mailto:contact@vonnneumann.com" class="text-sm font-medium px-4 py-2 rounded-lg bg-white text-black hover:bg-gray-200 transition-all shadow-sm">Request API Access</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-24 pb-16 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium mb-8">
+            <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+            Vonn Neumann Engine v1.4 Deployment Active
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight max-w-4xl mx-auto leading-tight mb-6">
+            Autonomous Agent Systems <br><span class="gradient-text">Deterministic Orchestration</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            Scalable runtime environment designed for multi-agent LLM workflows, context isolation, and ultra-low latency execution across hybrid cloud environments.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="mailto:contact@vonnneumann.com" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all shadow-lg shadow-purple-600/30">Start Integration</a>
+            <a href="#architecture" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-gray-800 text-gray-300 font-medium transition-all">Explore Architecture</a>
+        </div>
+    </section>
+
+    <!-- Code Preview Section -->
+    <section id="architecture" class="max-w-5xl mx-auto px-6 py-12">
+        <div class="glass-card rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-800">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                    <span class="text-xs text-gray-500 code-font ml-2">agent_orchestrator.py</span>
+                </div>
+                <span class="text-xs text-gray-400 code-font">Python 3.11</span>
+            </div>
+            <pre class="code-font text-sm text-gray-300 overflow-x-auto leading-relaxed"><code><span class="text-purple-400">from</span> vonnneumann <span class="text-purple-400">import</span> AgentRuntime, LLMCluster
+
+runtime = AgentRuntime(cluster=LLMCluster.HYBRID_ENTERPRISE)
+
+<span class="text-blue-400">@runtime.agent</span>(name=<span class="text-green-400">"DataAnalyst"</span>, isolation=<span class="text-green-400">"strict"</span>)
+<span class="text-purple-400">async def</span> <span class="text-blue-400">process_context</span>(ctx):
+    response = <span class="text-purple-400">await</span> ctx.orchestrate(
+        model=<span class="text-green-400">"claude-3-5-sonnet"</span>,
+        context_window=<span class="text-green-400">200000</span>,
+        strict_latency_ms=<span class="text-green-400">120</span>
+    )
+    <span class="text-purple-400">return</span> response.stream()</code></pre>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="platform" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6 text-xl">⚡</div>
+                <h3 class="text-xl font-semibold mb-3">Sub-100ms Orchestration</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Optimized routing protocols that eliminate prompt parsing overhead and context retrieval lag.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-6 text-xl">🛡️</div>
+                <h3 class="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">SOC2 Type II compliant environment with zero-data-retention options and localized token management.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 text-xl">🧩</div>
+                <h3 class="text-xl font-semibold mb-3">Multi-Agent Memory</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Shared state management with distributed vector caching for long-horizon operational agents.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/80 bg-[#070a10] py-12 text-sm text-gray-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <span class="font-medium text-gray-300">Vonn Neumann Systems Inc.</span>
+                <span>© 2026</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                <a href="#" class="hover:text-gray-300">Terms of Service</a>
+                <a href="mailto:contact@vonnneumann.com" class="hover:text-gray-300">contact@vonnneumann.com</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
