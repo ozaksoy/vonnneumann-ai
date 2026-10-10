@@ -22,11 +22,11 @@
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20">VN</div>
-        <span class="font-semibold text-lg tracking-tight text-white">Vonn Neumann <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-normal">Labs</span></span>
+        <span class="font-semibold text-lg tracking-tight text-white">Vonn Neumann <span class="text-xs px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-normal">AI</span></span>
       </div>
       <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
         <a href="#architecture" class="hover:text-white transition-colors">Architecture</a>
-        <a href="#claude-integration" class="hover:text-white transition-colors">Claude Entegrasyonu</a>
+        <a href="#claude-integration" class="hover:text-white transition-colors">Claude Integration</a>
         <a href="#principles" class="hover:text-white transition-colors">Principles</a>
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <a href="https://github.com/vonnneumann-ai" target="_blank" class="hover:text-white transition-colors flex items-center gap-1.5">
@@ -50,7 +50,7 @@
       Deterministic State Runtime for <br><span class="gradient-text">Multi-Agent LLM Workflows</span>
     </h1>
     <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-      Low-latency orchestration layer designed for context isolation, state synchronization, and native Anthropic Claude API tool execution.
+      Low-latency orchestration layer designed for context isolation, targeting sub-100ms state synchronization, and native Anthropic Claude API tool execution.
     </p>
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="mailto:contact@vonnneumann.com" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-all shadow-lg shadow-purple-600/30">Request Alpha Access</a>
@@ -88,7 +88,7 @@ router = AgentStateRouter(cache_ttl_sec=<span class="text-green-400">300</span>)
 <span class="text-blue-400">async def</span> <span class="text-blue-400">run_claude_agent</span>(prompt: str, context: dict):
     <span class="text-gray-500"># Direct Anthropic API call with Prompt Caching & Structured Tool Schema</span>
     response = <span class="text-purple-400">await</span> client.messages.create(
-        model=<span class="text-green-400">"claude-3-5-sonnet-20241022"</span>,
+        model=<span class="text-green-400">"claude-5-5-sonnet-latest"</span>,
         max_tokens=<span class="text-green-400">1024</span>,
         system=[{
             <span class="text-green-400">"type"</span>: <span class="text-green-400">"text"</span>, 
@@ -121,8 +121,8 @@ router = AgentStateRouter(cache_ttl_sec=<span class="text-green-400">300</span>)
       </div>
       <div class="glass-card glass-card-hover p-8 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6 text-xl">🧩</div>
-        <h3 class="text-xl font-semibold mb-3">Deterministic Output Guarantees</h3>
-        <p class="text-gray-400 text-sm leading-relaxed">Strict schema enforcement at the proxy level to ensure agent tool calls never fail JSON validation.</p>
+        <h3 class="text-xl font-semibold mb-3">Deterministic Output</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Strict schema enforcement at the proxy level designed to prevent JSON validation failures.</p>
       </div>
     </div>
   </section>
@@ -154,8 +154,8 @@ router = AgentStateRouter(cache_ttl_sec=<span class="text-green-400">300</span>)
   <footer class="border-t border-gray-800/80 bg-[#070a10] py-12 text-sm text-gray-500">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex flex-col gap-1 text-center md:text-left">
-        <span class="font-semibold text-gray-200">Vonn Neumann Systems</span>
-        <span class="text-xs text-gray-500">Company Reg & Contact Verified</span>
+        <span class="font-semibold text-gray-200">Vonn Neumann AI</span>
+        <span class="text-xs text-gray-500">Based in Çanakkale, Turkey</span>
         <span class="text-xs text-gray-600">© 2026 Vonn Neumann AI. All rights reserved.</span>
       </div>
       <div class="flex items-center gap-6">
@@ -171,7 +171,7 @@ router = AgentStateRouter(cache_ttl_sec=<span class="text-green-400">300</span>)
     <div class="glass-card max-w-2xl w-full p-8 rounded-2xl border border-gray-700 relative max-h-[80vh] overflow-y-auto">
       <button onclick="closePrivacyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl font-bold">&times;</button>
       <h3 class="text-2xl font-bold text-white mb-4">Privacy Policy</h3>
-      <p class="text-xs text-gray-400 mb-4">Last Updated: October 2026 • Vonn Neumann Systems</p>
+      <p class="text-xs text-gray-400 mb-4">Last Updated: October 2026 • Vonn Neumann AI</p>
       
       <div class="space-y-4 text-sm text-gray-300 leading-relaxed">
         <h4 class="font-semibold text-purple-400">1. Data Collection</h4>
